@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Krona+One&family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins";
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.navbar {
+  margin: 12px 120px;
+}
+
+#input-data {
+  margin: 48px 120px;
+}
+
+#input-data > p {
+  margin-right: 180px;
+  margin-left: 180px;
+}
+
+#sampahMakanan {
+  font-size: 0.75em;
+}
+
+#pilihan-jenis-sampah input:focus {
+  border: none;
+}
+
+#input-data > button {
+  background-color: #b7eb8f;
+}

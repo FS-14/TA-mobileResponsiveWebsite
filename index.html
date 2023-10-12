@@ -13,29 +13,71 @@
     />
   </head>
   <body>
-    <header>
-      <h1><span>Eco</span>Sampah</h1>
-      <nav>
-        <a href="">Home</a>
-        <a href="">About</a>
-        <div>
-          <a href="">Features</a>
-          <img src="" alt="arrow down" />
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-3 me-5" href="#"><span>Eco</span>Sampah</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-black me-4 ms-4"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black me-4" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-black me-4"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Features
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black me-4" href="#">Contact Us</a>
+            </li>
+          </ul>
         </div>
-        <a href="">Contact Us</a>
-      </nav>
-      <img src="" alt="photo profile" />
-    </header>
-    <section id="input-data">
-      <h1>Pick Up</h1>
+        <div>
+          <img src="" alt="Photo Profile" />
+        </div>
+      </div>
+    </nav>
+    <section id="input-data" class="text-center">
+      <h2>Pick Up</h2>
       <hr />
-      <h2>Input Data Sampah</h2>
+      <h3>Input Data Sampah</h3>
       <p>
         Layanan ini membantu menghubungkan pengguna dengan penyedia jasa
         pengambilan sampah profesional untuk memastikan sampah kamu diproses
         dengan benar.
       </p>
-      <form>
+      <form class="text-start">
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
             >Alamat</label
@@ -49,10 +91,37 @@
         </div>
         <div>
           <p>Jenis Sampah</p>
-          <div id="pilihan-jenis-sampah" class="row row-cols-3">
+          <div id="pilihan-jenis-sampah" class="row row-cols-3 ms-5">
             <div class="mb-3 col row">
               <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Password</label
+                >Plastik</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                />
+              </div>
+            </div>
+            <div class="mb-3 col row">
+              <label
+                for="inputPassword"
+                id="sampahMakanan"
+                class="col-sm-2 col-form-label"
+                >Sampah Makanan
+              </label>
+              <div class="col-sm-10">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                />
+              </div>
+            </div>
+            <div class="mb-3 col row">
+              <label for="inputPassword" class="col-sm-2 col-form-label"
+                >Kertas</label
               >
               <div class="col-sm-10">
                 <input
@@ -64,7 +133,7 @@
             </div>
             <div class="mb-3 col row">
               <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Password</label
+                >Karton</label
               >
               <div class="col-sm-10">
                 <input
@@ -76,7 +145,7 @@
             </div>
             <div class="mb-3 col row">
               <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Password</label
+                >Kaleng</label
               >
               <div class="col-sm-10">
                 <input
@@ -88,31 +157,7 @@
             </div>
             <div class="mb-3 col row">
               <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Password</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword"
-                />
-              </div>
-            </div>
-            <div class="mb-3 col row">
-              <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Password</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword"
-                />
-              </div>
-            </div>
-            <div class="mb-3 col row">
-              <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Password</label
+                >Kaca</label
               >
               <div class="col-sm-10">
                 <input
@@ -135,8 +180,8 @@
             placeholder="opsional"
           ></textarea>
         </div>
-        <button type="submit">Cari</button>
       </form>
+      <button type="submit" class="btn">Cari</button>
     </section>
 
     <script
