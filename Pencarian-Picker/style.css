@@ -12,8 +12,15 @@
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 24px 120px;
   box-shadow: 0 0.5px 8px gray;
+}
+
+#header-left {
+  display: flex;
 }
 
 #header-left h3 {
@@ -27,23 +34,29 @@ header {
   margin-right: 36px;
 }
 
-#input-data {
-  margin: 48px 120px;
+header nav {
+  display: flex;
 }
 
-#input-data > p {
-  margin-right: 180px;
-  margin-left: 180px;
+header img {
+  border-radius: 50%;
 }
 
-#sampahMakanan {
-  font-size: 0.75em;
+#pencarian-picker {
+  text-align: center;
+  align-items: center;
+  margin: 60px 0;
 }
 
-#pilihan-jenis-sampah input:focus {
+#btn-batalkan-picker {
+  background-color: var(--secondary-color);
   border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  margin-top: 24px;
 }
 
-#input-data > button {
-  background-color: #b7eb8f;
+#btn-batalkan-picker:hover {
+  font-weight: bold;
+  border: 2px solid var(--accent-color);
 }
