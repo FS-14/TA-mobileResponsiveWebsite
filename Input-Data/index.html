@@ -51,105 +51,155 @@
       <h2>Pick Up</h2>
       <hr />
       <h3>Input Data Sampah</h3>
-      <p>
+      <p class="mb-5">
         Layanan ini membantu menghubungkan pengguna dengan penyedia jasa
         pengambilan sampah profesional untuk memastikan sampah kamu diproses
-        dengan benar.
+        dengan benar
       </p>
       <form class="text-start">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Alamat</label
-          >
+        <div class="mb-4">
+          <label for="inputName" class="form-label fw-bold">Nama</label>
           <input
-            type="email"
+            type="text"
             class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Masukkan alamat penjemputan"
+            id="inputName"
+            placeholder="Masukkan nama"
+            required
           />
         </div>
-        <div>
-          <p>Jenis Sampah</p>
-          <div id="pilihan-jenis-sampah" class="row row-cols-3 ms-5">
-            <div class="mb-3 col row">
-              <label for="inputPassword" class="col-sm-2 col-form-label"
+        <div class="mb-4">
+          <label for="inputNoHP" class="form-label fw-bold"
+            >Nomor Handphone</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="inputNoHP"
+            placeholder="Masukkan nomor handphone"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="inputAlamat" class="form-label fw-bold">Alamat</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAlamat"
+            placeholder="Masukkan alamat lengkap penjemputan (nama jalan, nomor rumah, RT, RW, Dusun, Desa, Kecamatan, Kabupaten/Kota, Provinsi)"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <p class="fw-bold">Jenis Sampah</p>
+          <div id="pilihan-jenis-sampah" class="row row-cols-3 ms-2">
+            <div class="mb-3 me-1 col row">
+              <label for="inputPlastik" class="col-2 col-form-label"
                 >Plastik</label
               >
-              <div class="col-sm-10">
+              <div class="col-7">
                 <input
-                  type="password"
+                  type="number"
                   class="form-control"
-                  id="inputPassword"
+                  id="inputPlastik"
+                  placeholder="Dalam KG"
+                  disabled
                 />
               </div>
+              <button id="buttonTambahSampahPlastik" class="col-3 rounded-pill">
+                Tambah
+              </button>
             </div>
-            <div class="mb-3 col row">
+            <div class="mb-3 me-1 col row">
               <label
-                for="inputPassword"
                 id="sampahMakanan"
-                class="col-sm-2 col-form-label"
-                >Sampah Makanan
-              </label>
-              <div class="col-sm-10">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword"
-                />
-              </div>
-            </div>
-            <div class="mb-3 col row">
-              <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Kertas</label
+                for="inputSampahMakanan"
+                class="col-3 col-form-label"
               >
-              <div class="col-sm-10">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword"
-                />
-              </div>
-            </div>
-            <div class="mb-3 col row">
-              <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Karton</label
+                Makanan</label
               >
-              <div class="col-sm-10">
+              <div class="col-6">
                 <input
-                  type="password"
+                  type="number"
                   class="form-control"
-                  id="inputPassword"
+                  id="inputSampahMakanan"
+                  placeholder="Dalam KG"
+                  disabled
                 />
               </div>
+              <button id="buttonTambahSampahMakanan" class="col-3 rounded-pill">
+                Tambah
+              </button>
             </div>
-            <div class="mb-3 col row">
-              <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Kaleng</label
+            <div class="mb-3 me-1 col row">
+              <label for="inputKertas" class="col-2 col-form-label">
+                Kertas</label
               >
-              <div class="col-sm-10">
+              <div class="col-7">
                 <input
-                  type="password"
+                  type="number"
                   class="form-control"
-                  id="inputPassword"
+                  id="inputKertas"
+                  placeholder="Dalam KG"
+                  disabled
                 />
               </div>
+              <button id="buttonTambahKertas" class="col-3 rounded-pill">
+                Tambah
+              </button>
             </div>
-            <div class="mb-3 col row">
-              <label for="inputPassword" class="col-sm-2 col-form-label"
-                >Kaca</label
+            <div class="mb-3 me-1 col row">
+              <label for="inputKarton" class="col-2 col-form-label">
+                Karton</label
               >
-              <div class="col-sm-10">
+              <div class="col-7">
                 <input
-                  type="password"
+                  type="number"
                   class="form-control"
-                  id="inputPassword"
+                  id="inputKarton"
+                  placeholder="Dalam KG"
+                  disabled
                 />
               </div>
+              <button id="buttonTambahKarton" class="col-3 rounded-pill">
+                Tambah
+              </button>
+            </div>
+            <div class="mb-3 me-1 col row">
+              <label for="inputKaleng" class="col-2 col-form-label">
+                Kaleng</label
+              >
+              <div class="col-7">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputKaleng"
+                  placeholder="Dalam KG"
+                  disabled
+                />
+              </div>
+              <button id="buttonTambahKaleng" class="col-3 rounded-pill">
+                Tambah
+              </button>
+            </div>
+            <div class="mb-3 me-1 col row">
+              <label for="inputKaca" class="col-2 col-form-label">Kaca</label>
+              <div class="col-7">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputKaca"
+                  placeholder="Dalam KG"
+                  disabled
+                />
+              </div>
+              <button id="buttonTambahKaca" class="col-3 rounded-pill">
+                Tambah
+              </button>
             </div>
           </div>
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
+          <label for="exampleFormControlTextarea1" class="form-label fw-bold"
             >Deskripsi</label
           >
           <textarea
@@ -159,8 +209,12 @@
             placeholder="opsional"
           ></textarea>
         </div>
+        <div class="mt-5 text-center">
+          <button id="submitDataSampah" type="submit" class="rounded-pill">
+            Cari
+          </button>
+        </div>
       </form>
-      <button type="submit" class="btn">Cari</button>
     </section>
 
     <script
