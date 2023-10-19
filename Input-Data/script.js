@@ -1,51 +1,53 @@
-let elementPlastik = document.getElementById("buttonTambahSampahPlastik");
-let tujuanPlastik = document.getElementById("inputPlastik");
+const elementPlastik = document.getElementById("buttonTambahSampahPlastik");
+const tujuanPlastik = document.getElementById("inputPlastik");
 elementPlastik.addEventListener("click", (e) => {
   e.preventDefault();
   tujuanPlastik.disabled = false;
 });
 
-let elementSampahMakanan = document.getElementById("buttonTambahSampahMakanan");
-let tujuanSampahMakanan = document.getElementById("inputSampahMakanan");
+const elementSampahMakanan = document.getElementById(
+  "buttonTambahSampahMakanan"
+);
+const tujuanSampahMakanan = document.getElementById("inputSampahMakanan");
 elementSampahMakanan.addEventListener("click", (e) => {
   e.preventDefault();
   tujuanSampahMakanan.disabled = false;
 });
 
-let elementKertas = document.getElementById("buttonTambahKertas");
-let tujuanKertas = document.getElementById("inputKertas");
+const elementKertas = document.getElementById("buttonTambahKertas");
+const tujuanKertas = document.getElementById("inputKertas");
 elementKertas.addEventListener("click", (e) => {
   e.preventDefault();
   tujuanKertas.disabled = false;
 });
 
-let elementKarton = document.getElementById("buttonTambahKarton");
-let tujuanKarton = document.getElementById("inputKarton");
+const elementKarton = document.getElementById("buttonTambahKarton");
+const tujuanKarton = document.getElementById("inputKarton");
 elementKarton.addEventListener("click", (e) => {
   e.preventDefault();
   tujuanKarton.disabled = false;
 });
 
-let elementKaleng = document.getElementById("buttonTambahKaleng");
-let tujuanKaleng = document.getElementById("inputKaleng");
+const elementKaleng = document.getElementById("buttonTambahKaleng");
+const tujuanKaleng = document.getElementById("inputKaleng");
 elementKaleng.addEventListener("click", (e) => {
   e.preventDefault();
   tujuanKaleng.disabled = false;
 });
 
-let elementKaca = document.getElementById("buttonTambahKaca");
-let tujuanKaca = document.getElementById("inputKaca");
+const elementKaca = document.getElementById("buttonTambahKaca");
+const tujuanKaca = document.getElementById("inputKaca");
 elementKaca.addEventListener("click", (e) => {
   e.preventDefault();
   tujuanKaca.disabled = false;
 });
 
-let nama = document.getElementById("inputName");
-let noHP = document.getElementById("inputNoHP");
-let alamat = document.getElementById("inputAlamat");
-let deskripsi = document.getElementById("inputDeskripsi");
+const nama = document.getElementById("inputName");
+const noHP = document.getElementById("inputNoHP");
+const alamat = document.getElementById("inputAlamat");
+const deskripsi = document.getElementById("inputDeskripsi");
 
-let btnSubmit = document.getElementById("submitDataSampah");
+const btnSubmit = document.getElementById("submitDataSampah");
 btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   let namaValue = nama.value;
@@ -63,6 +65,12 @@ btnSubmit.addEventListener("click", (e) => {
     let datas = [
       {
         nama: namaValue,
+      },
+      {
+        noHP: NoHPValue,
+      },
+      {
+        alamat: alamatValue,
       },
       {
         name: "Plastik",
@@ -94,21 +102,19 @@ btnSubmit.addEventListener("click", (e) => {
         value: kacaValue,
         image: "../assets/mirror.svg",
       },
+
+      {
+        deskripsi: deskripsiValue,
+      },
     ];
     localStorage.setItem("datas", JSON.stringify(datas));
 
-    // localStorage.setItem("Nama", namaValue);
-    // localStorage.setItem("No HP", NoHPValue);
-    // localStorage.setItem("Alamat", alamatValue);
-    // localStorage.setItem("Plastik", plastikValue);
-    // localStorage.setItem("Sampah Makanan", sampahMakananValue);
-    // localStorage.setItem("Kertas", kertasValue);
-    // localStorage.setItem("Karton", kartonValue);
-    // localStorage.setItem("Kaleng", kalengValue);
-    // localStorage.setItem("Kaca", kacaValue);
-    // localStorage.setItem("Deskripsi", deskripsiValue);
-
     window.location.href = "../Pencarian-Picker/index.html";
+
+    namaValue = "";
+    NoHPValue = "";
+    alamatValue = "";
+    deskripsiValue = "";
   } else {
     alert("Isi Data Diri dan Data Sampah");
   }

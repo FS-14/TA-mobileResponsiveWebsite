@@ -1,15 +1,21 @@
-let rincian = document.getElementById("rincianSampah");
+const rincian = document.getElementById("rincianSampah");
 
 document.addEventListener("DOMContentLoaded", () => {
-  let dataSampah = localStorage.getItem("datas");
+  const dataSampah = localStorage.getItem("datas");
   if (dataSampah) {
     let getRincian = JSON.parse(dataSampah);
     console.log(getRincian);
-    let displayRincian = document.getElementById("buatRincianSampah");
 
-    // for (let key in getRincian)
+    const displayRincian = document.getElementById("buatRincianSampah");
+
     getRincian.map((item) => {
-      if (item.value !== "" && !item.nama)
+      if (
+        item.value !== "" &&
+        !item.nama &&
+        !item.noHP &&
+        !item.alamat &&
+        !item.deskripsi
+      )
         displayRincian.innerHTML += `
                 <div class="rincian">
                     <div>
@@ -20,5 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 `;
     });
+  } else {
+    console.log("Tidak ada data");
   }
 });
