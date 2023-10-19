@@ -1,4 +1,4 @@
-const BASE_API = "https://652ff3566c756603295dfc8e.mockapi.io";
+const BASE_API = "https://65316f724d4c2e3f333d00da.mockapi.io";
 const fetcher = async ({ endpoint = "", config = {} }) => {
     let result = {
       data: [],
@@ -26,7 +26,7 @@ const fetcher = async ({ endpoint = "", config = {} }) => {
     const inputPassword = document.getElementById("password").value;
   
     const { data } = await fetcher({
-      endpoint: "user",
+      endpoint: "users",
     });
   
     const isUserExist = data?.find(
