@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eco Sampah</title>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="forms">
-        <div class="form login">
-          <span class="title">login</span>
-          <form action="#">
-            <div class="input-field">
-              <input type="text" placeholder="Email" required>             
-            </div>
-            <div class="input-field">
-              <input type="password" class="password" placeholder="Password" required>
-              <i class="uil uil-eyes-slash showHidePw"></i>
-            </div>
-            <div class="checkbox-text">
-              <a href="#">Forget Password?</a>
-            </div>
-            <div class="input-field button">
-              <input type="button" value="login">
-            </div>
-          </form>
-          <div class="login-signup">
-            <span class="text">Belum punya akun?
-              <a href="#" class="text sign-link">Register</a>
-            </span>
-          </div>
-        </div>
-        
-      </div>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <script src="script.js"></script>
-  </body>
+  <section class="login">
+    <div class="container">
+      <div class="left">
+        <img src="asset/Recycle.jpg" >
+      </div>
+        <div class="right">
+            <form id="form" action="javascript:void(0)">
+                <h1>Selamat Datang!</h1>
+                <p>Masukan detail akunmu</p>
+
+                <div class="form-email">
+                <label for="email">Email</label><br>
+                <input type="email" id="email">
+                </div>
+
+                <div class="form-password">
+                <label for="email">Password</label><br>
+                <input type="password" id="password" >
+                </div>
+
+                <a href="forgotpass.html" class="form-forgot">Forgot password?</a><br>
+                <button type="submit" id="btn">Masuk</button>
+
+                <div class="media-options">
+                  <a href="#" class="field google">
+                      <img src="asset/google.svg" alt="" class="google-img">
+                      <span>Masuk dengan Google</span>
+                  </a>
+              </div>
+              <div class="form-signup">
+                <p>Don't have an account? <a href="register.html">Signup</a></p>
+              </div>
+            </form>
+        </div>
+      </div>
+  </section>
+    <script src="login.js"></script>
+</body>
 </html>
