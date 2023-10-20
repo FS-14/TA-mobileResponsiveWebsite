@@ -113,7 +113,7 @@ btnSubmit.addEventListener("click", (e) => {
     ];
     localStorage.setItem("datas", JSON.stringify(datas));
 
-    window.location.href = "../Pencarian-Picker/index.html";
+    window.location.href = "Pencarian-Picker/index.html";
 
     namaValue = "";
     NoHPValue = "";
