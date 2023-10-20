@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const dataSampah = localStorage.getItem("datas");
   if (dataSampah) {
     let getRincian = JSON.parse(dataSampah);
-    console.log(getRincian);
+    // console.log(getRincian);
 
     const displayRincian = document.getElementById("buatRincianSampah");
 
