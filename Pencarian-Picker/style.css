@@ -23,7 +23,13 @@ header {
   display: flex;
 }
 
+#headerEco {
+  font-family: "Krona One";
+  color: var(--secondary-color);
+}
+
 #header-left h3 {
+  font-family: "Krona One";
   margin-right: 72px;
   margin-bottom: 0;
 }
@@ -34,7 +40,7 @@ header {
   margin-right: 36px;
 }
 
-header nav {
+#navbar {
   display: flex;
 }
 
@@ -59,4 +65,14 @@ header img {
 #btn-batalkan-picker:hover {
   font-weight: bold;
   border: 2px solid var(--accent-color);
+}
+
+@media only screen and (max-width: 360px) {
+  header {
+    padding: 12px 24px;
+  }
+
+  #navbar {
+    display: none;
+  }
 }

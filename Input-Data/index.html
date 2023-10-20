@@ -15,8 +15,8 @@
   <body>
     <header class="d-flex justify-content-between align-items-center">
       <div id="header-left" class="d-flex">
-        <h3><span>Eco</span>Sampah</h3>
-        <nav class="d-flex align-items-center">
+        <h3><span id="headerEco">Eco</span>Sampah</h3>
+        <nav id="navbar" class="align-items-center">
           <a href="">Home</a>
           <a href="">About</a>
           <div class="nav-item dropdown">
@@ -30,11 +30,7 @@
               Features
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
+              <li><a class="dropdown-item" href="#">Ambil Sampah</a></li>
             </ul>
           </div>
           <a href="">Contact Us</a>
@@ -48,7 +44,7 @@
       />
     </header>
     <section id="input-data" class="text-center">
-      <h2>Pick Up</h2>
+      <h2 class="rounded-4">Pick Up</h2>
       <hr />
       <h3>Input Data Sampah</h3>
       <p class="mb-5">
@@ -206,7 +202,8 @@
             class="form-control"
             id="inputDeskripsi"
             rows="3"
-            placeholder="opsional"
+            placeholder="Deskripskan kondisi sampah yang ingin diambil"
+            required
           ></textarea>
         </div>
         <div class="mt-5 text-center">

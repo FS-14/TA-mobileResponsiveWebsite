@@ -61,7 +61,12 @@ btnSubmit.addEventListener("click", (e) => {
   let kacaValue = tujuanKaca.value;
   let deskripsiValue = deskripsi.value;
 
-  if (namaValue !== "" && NoHPValue !== "" && alamatValue !== "") {
+  if (
+    namaValue !== "" &&
+    NoHPValue !== "" &&
+    alamatValue !== "" &&
+    deskripsiValue !== ""
+  ) {
     let datas = [
       {
         nama: namaValue,
@@ -102,7 +107,6 @@ btnSubmit.addEventListener("click", (e) => {
         value: kacaValue,
         image: "../assets/mirror.svg",
       },
-
       {
         deskripsi: deskripsiValue,
       },
@@ -116,6 +120,6 @@ btnSubmit.addEventListener("click", (e) => {
     alamatValue = "";
     deskripsiValue = "";
   } else {
-    alert("Isi Data Diri dan Data Sampah");
+    alert("Isi Semua Data Diri dan Data Sampah");
   }
 });
